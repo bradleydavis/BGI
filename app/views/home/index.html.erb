@@ -32,7 +32,7 @@
 								<!-- this text fades down on hover -->
 								<div class="generic-slide-text">
 									<h3 class="name tac"><%= person.title %></h3>
-									<p class="sub"><%= person.content_for(:subtitle).html_safe %></p>
+									<p class="sub"><%= ActionView::Base.full_sanitizer.sanitize person.content_for(:subtitle) %></p>
 								</div>
 								<!-- END - this text fades down on hover -->
 								<%= image_tag(image_for(person.content_for(:image)), :alt => "#{person.title}-image") %>
