@@ -1,0 +1,134 @@
+.delay-1 {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+.delay-1half {
+	animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+}
+.generic-section {	
+	.generic-slide-wrap {
+		@include tran-1half;		
+		img {
+			@include tran-3;
+			-webkit-transform: scale(1);
+   			transform: scale(1);
+		}
+	}
+	.generic-slide-text {
+		@include tran-3;
+	}		
+}
+.no-touch .generic-slide-wrap:hover .generic-slide-text + img {
+	-webkit-transform: scale(1.08);
+   transform: scale(1.08);
+   @media only screen and (max-width: 640px) {
+   		-webkit-transform: scale(1.1);
+   		transform: scale(1.1);
+   }
+}
+nav {
+	p {
+		@include tran-3;
+	}
+}
+.nav-link {
+	@include tran-3;
+	&.new-page {
+		&:hover {
+			span {
+				@include rotateminus45;
+			}
+		}
+	}
+}
+.ham-nav-wrap {
+	@include tran-3;
+	p {
+		@include tran-3;
+	}
+	.bun {
+		@include tran-5;
+	}
+}
+.open-right .ham-nav-wrap {
+	.bun.one {
+		transform-origin: top left;
+		-ms-transform: translate3d(0,0,0) rotate(36deg); /* IE 9 */
+    -webkit-transform: translate3d(0,0,0) rotate(36deg); /* Chrome, Safari, Opera */
+    transform: translate3d(0,0,0) rotate(36deg);
+	}
+	.bun.three {
+		-ms-transform: translate3d(0,0,0) rotate(-34deg); /* IE 9 */
+    -webkit-transform: translate3d(0,0,0) rotate(-34deg); /* Chrome, Safari, Opera */
+    transform: translate3d(0,0,0) rotate(-34deg);
+    transform-origin: bottom left;
+	}
+}
+.social-icon {
+	-webkit-transform: scale(.7);
+	transform: scale(.7);
+	@media only screen and (min-width: 780px) {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	a {
+		@include tran-1half;
+		-webkit-transform: scale(1);
+   	transform: scale(1);
+		&:hover {
+			.no-touch & {
+   			-webkit-transform: scale(1.05);
+   			transform: scale(1.05);
+   		}
+		}
+	}
+}
+.overlay {
+	@include openAnimation;
+	&.on {
+		-webkit-transform: scale(1);
+   		transform: scale(1);
+	}
+	.popupMailLink {
+		@include tran-1half;
+	}
+	.programmeProgrammeLink {
+		@include tran-3;
+	}
+	.closeOverlay, .nextPrevPage {
+		.no-touch & {
+			@include tran-1half;
+			&:hover {
+				-webkit-transform: scale(1.5);
+	   			transform: scale(1.5);
+			}
+		}
+	}
+}
+.no-touch {
+	.side-section {
+		.sideMapWrap {
+			.sideMap {
+				@include tran-1half;
+				-webkit-transform: scale(1);
+	   			transform: scale(1);
+	   			&:hover {
+	   				-webkit-transform: scale(1.1);
+	   				transform: scale(1.1);
+	   			}
+			}
+			p {
+				@include tran-1half;
+			}
+		}
+		input, textarea {
+			@include tran-1half;
+		}
+	}
+}
+
+
+
+
+

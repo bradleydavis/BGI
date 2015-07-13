@@ -1,0 +1,51 @@
+.underline {
+	width: 100px;
+	height: 5px;
+	margin: 1em auto 4em auto;
+	background-color: white;
+	&.grey {
+		background-color: $light-brown;
+		margin: 1em 0 1.6em 0;
+		width: 80px;
+	}
+	.filters-wrap & {
+		margin-bottom: 3em;
+	}
+	@media only screen and (max-width: 1024px) {
+		height: 3px;
+	}
+	@media only screen and (min-width: 1024px) {
+		margin-bottom: 3em;
+	}
+}
+
+.color-circle {
+	width: .7em;
+	height: .7em;
+	border-radius: 50%;
+}
+.close-icon-wrap {
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 103;
+	cursor: pointer;
+	@include rotate45;
+	@include tran-3;
+	.stick {
+		width: 2em;
+		height: .2em;
+		background-color: white;
+		position: absolute;
+		top: 50%;
+		top: calc(50% - .1em);
+		&.one {
+			@include rotate90;
+		}
+	}
+	&:hover {
+		opacity: .6;
+	}
+}

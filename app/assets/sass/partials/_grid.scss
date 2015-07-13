@@ -1,0 +1,43 @@
+.column {
+	box-sizing: border-box;
+	padding: 40px 20px;
+}
+.w-4-12 {
+	width: 33.333333333%;
+}
+.w-5-12 {
+	width: 41.666666667%;
+}
+.w-6-12 {
+	width: 50%;
+}
+.w-7-12 {
+	width: 58.333333333%;
+}
+.w-8-12 {
+	width: 66.666666666%;
+}
+.w-9-12 {
+	width: 75%;
+}
+.w-10-12 {
+	width: 83.333333333%;
+}
+.w-11-12 {
+	width: 91.666666666%;
+}
+.w-12-12 {
+	width: 100%;
+}
+.w-14-12 {
+	width: 116.66666667%;
+}
+.w-16-12 {
+	width: 115%;
+	@media only screen and (max-width: 480px) {
+		width: 100%;
+	}
+	@media only screen and (min-width: 1400px) {
+		width: 100%;
+	}
+}

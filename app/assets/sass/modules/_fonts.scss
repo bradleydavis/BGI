@@ -1,0 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Prata);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
+
+@font-face {
+    font-family: 'sosa';
+    src: font-url('sosa.eot');
+    src: font-url('sosa.eot?#iefix') format('embedded-opentype'),
+         font-url('sosa.woff') format('woff'),
+         font-url('sosa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin helvetica-ultralight {
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+@mixin helvetica {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+
+
+
+
+
+
+

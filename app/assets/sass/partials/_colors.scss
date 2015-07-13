@@ -1,0 +1,192 @@
+.blue {
+	background: $blue;
+}
+.red {
+	background: $red;
+}
+.green {
+	background: $green;
+}
+.callout-section {
+	background-color: darken($blue, 10%);
+	h1, h3 {
+		color: $popup-bg;
+	}
+}
+#fixed-nav {
+	color: white;
+}
+.catchphrase {
+	color: rgba(41,42,44,.9);
+	text-shadow: 4px 4px 0 rgba(0,138,255,.8);
+}
+footer {
+	background-color: $blue;
+}
+
+input {
+	color: $light-brown;
+	background-color: white;
+}
+
+.side-section {
+	.sideMapWrap {
+		p {
+			color: white;
+		}
+	}
+	input, textarea, input[type="submit"] {
+		background-color: $light-brown;
+		color: $popup-bg;
+			&:hover, &:focus {
+				background-color: darken($light-brown, 8%);
+		}
+	}
+	.mapLink {
+		color: $blue;
+	}
+}
+.generic-section {	
+	.generic-slide-text {
+		.name {
+			color: $popup-bg;
+		}
+		.sub {
+			color: $popup-bg;
+		}
+	}
+	.no-touch & {
+		.generic-slide-wrap  {
+			&:hover  {
+				background-color: $blue;
+			}
+			.generic-slide-text {
+				.sub {
+					color: white;
+				}
+			}
+		}
+	}
+}
+.slick-wrap {
+	&:before {
+		@media only screen and (min-width: 480px) and (max-width: 1400px) {
+			background-color: $popup-bg-10;
+		}
+	}
+}
+.slick-dots {
+	li {
+		button {
+			background-color: $grey;
+		}
+		&.slick-active {
+			button {
+				background-color: $blue;
+				background-color: $popup-bg;
+			}
+		}
+	}
+}
+li {
+	color: $dark-grey;
+}
+.map {
+	p {
+		color: white;
+	}
+}
+nav {
+	p {
+		color: white;
+	}
+}
+a {
+	color: $dark-grey;
+	&.goto {
+		color: $blue;
+	}
+}
+.ham-nav-wrap {
+	.bun {
+		background-color: white;
+	}
+}
+.side-nav{
+	background:white;
+	color: $dark-grey;
+	li {
+		.sub-li {
+			color: $grey-text;
+		}
+	}
+}
+.sidenav-logo-wrap {
+	h3 {
+		color: white;
+	}
+}
+.social-icon {
+	a {
+		color: white;
+	}
+}
+.overlay {
+	background-color: $popup-bg;
+	color: white;
+	.popupWrap {
+		.popupText {
+			color: white;
+			h2 {
+				color: white;
+				text-shadow: 4px 4px 0 rgba(0,0,0,.8);
+			}
+			.popupMailLink {
+				color: lighten($blue, 20%);
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+		.programmeProgrammeLink {
+			color: lighten($blue, 20%);
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+	.closeOverlay {
+		color: white;
+		&:hover {
+			color: $blue;
+		}
+	}
+	.nextPrevPage {
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+.no-touch {
+	.side-section {
+		.sideMapWrap {
+			background-color: $popup-bg;
+		}
+	}
+}
+.section-heading {
+	text-shadow: 2px 2px 0 rgba(200,200,200,.8);
+	span {
+		text-shadow: 2px 2px 0 rgba(0,138,255,.8);
+	}
+}
+
+
+
+
+
+
+
+
+
+

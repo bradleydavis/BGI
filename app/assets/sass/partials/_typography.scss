@@ -1,0 +1,275 @@
+body {
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 100;
+	@media only screen and (max-width: 640px) {
+		font-size: 12px;
+	}
+	@media only screen and (min-width: 640px) and (max-width: 1024px) {
+		font-size: 14px;
+	}
+	@media only screen and (min-width: 1024px) {
+		font-size: 16px;
+	}
+	@media only screen and (min-width: 1500px) {
+		font-size: 20px;
+	}
+}
+h2 {
+	color: $popup-bg;
+	font-size: 4em;
+}
+h1 {
+	font-size: 2em;
+	@media only screen and (min-width: 600px) {
+		font-size: 3.5em;
+	}
+}
+h3 {
+	font-size: 1.5em;
+	letter-spacing: .06em;
+	font-weight: 300;
+}
+p {
+	font-size: 1.3em;
+	letter-spacing: 0.04em;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+p, h3, li {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+a {
+	&.goto {
+		font-size: 1.2em;
+		span {
+			@include sosa;
+			font-size: 1em;
+		}
+	}
+}
+.tac {
+	text-align: center;
+}
+.callout-section {
+	h1, h3 {
+		font-weight: 200;
+	}
+	h1 {
+		font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+	}
+}
+.catchphrase {
+	font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+	font-size: 3em;
+	line-height: 1;
+}
+#fixed-nav {
+	font-size: 1em;
+}
+
+footer {
+	p {
+		@include sosa;
+	}
+}
+input {
+	font-size: 1.6em;
+	letter-spacing: .06em;
+	font-weight: 100 !important;
+	@include font-smooth;
+}
+.side-section {
+	input {
+		font-size: 1em;
+	}
+	.mapLink {
+		font-size: .8em;
+		font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.sideMapWrap {
+		p {
+			text-align: center;
+			font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+		}
+	}
+}
+.generic-section {
+	.generic-slide-text {
+		text-align: center;
+		.name {
+			font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+			word-wrap: break-word;
+			font-size: 22px;
+			@media only screen and (min-width: 480px) {
+				font-size: 18px;
+			}
+		}
+		.sub {
+			font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+			font-size: 18px;
+			line-height: 1;
+			@media only screen and (min-width: 480px) {
+				font-size: 15px;
+			}
+		}
+	}
+	.no-touch & {
+		.generic-slide-wrap  {
+			.generic-slide-text {
+				.name {
+					line-height: 1;
+				}
+			}
+		}
+	}	
+}
+ul {
+	&.icon-list {
+		li {
+			line-height: 1.6;
+		}
+	}
+}
+li {
+	font-size: 1.2em;
+	font-weight: 400;
+	.sub-li {
+		font-size: 1em;
+		&.small {
+			font-size: .85em;
+		}
+	}
+}
+.map {
+	p {
+		text-align: center;
+		font-size: 1.5em;
+		&.map-heading {
+			font-size: 2em;
+		}
+	}
+}
+nav {
+	p {
+		font-weight: 500;
+	}
+}
+.nav-link {
+	p {
+		font-size: 1em;
+		line-height: 2em;
+		span {
+			.fontface & {
+				@include sosa;
+				font-size: 1em;
+			}
+		}
+	}
+	&.back-home p span {
+		font-size: 1.3em;
+	}
+}
+a {
+	text-decoration: none;
+}
+.ham-nav-wrap {
+	p {
+		font-size: 1em;
+		line-height: 2.4em;
+	}
+}
+.side-nav{
+	h3 {
+		font-size: 1.2em;
+		font-weight: 400;
+	}
+	ul {
+		list-style-type: none;
+	}
+	li {
+		font-size: 1em;	
+		.sub-li {
+			line-height: 1.2;
+		}
+	}
+}
+.sidenav-logo-wrap {
+	h3 {
+		line-height: 1.8em;
+		font-size: 1.5em;
+		font-weight: 600;
+		letter-spacing: 0;
+		span {
+			font-weight: 300;
+		}
+	}
+}
+.social-icon {
+	a {
+		text-decoration: none;
+	}
+	p {
+		font-size: 56px;
+		line-height: 96px;
+		@include sosa;
+	}
+}
+.section-heading {
+	font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+	font-weight: 200;
+	@include font-smooth;
+	font-size: 3em;
+	@media only screen and (min-width: 70em) {
+		width: 13em;
+	}
+	span {
+	}
+}
+.overlay {
+	.closeOverlay {
+		font-size: 2em;	
+	}
+	.nextPrevPage {
+		font-size: 3em;
+		line-height: 1;
+	}
+	.popupWrap {
+		.popupText{
+			h2 {
+				font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+				line-height: 1;
+
+				span {
+					font-size: .3em;
+				}
+			}
+			p {
+				font-size: 1.5em;
+				line-height: 1.5;
+				font-weight: 200;
+			}
+			.popupMailLink {
+				font-size: 1.5em;
+				font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+			}
+			.programmeProgrammeLink {
+				font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+				font-size: 1.5em;
+				text-align: center;
+				@media only screen and (min-width: 30em) {
+					font-size: 2.2em;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

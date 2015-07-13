@@ -1,0 +1,28 @@
+h1, h2, h3 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+img {
+	display: block;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: left;
+}
+.cf:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.cf { display: inline-block; }
+/* start commented backslash hack \*/
+* html .cf { height: 1%; }
+.cf { display: block; }
+/* close commented backslash hack */

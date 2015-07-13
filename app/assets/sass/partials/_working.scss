@@ -1,0 +1,16 @@
+.nextPrevPage {
+	position: absolute;
+	top: 45%;
+	font-size: 2em;
+	line-height: 1;
+	cursor: pointer;
+	&.prevPage {
+		left: 1em;
+	}
+	&.nextPage {
+		right: 1em;
+	}
+	&:hover {
+		color: $blue;
+	}
+}

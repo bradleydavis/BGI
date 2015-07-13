@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BGI</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'bgiFavicon.png' %>
+</head>
+<body id="scroll-top" class="body">
+
+<!-- Staff popup -->
+
+<div class="overlay staffOverlay">
+	<a class="closeOverlay closeStaff">&#10005</a>
+	<div class="nextPrevPage prevPage">
+		<p>&#x022F0;</p>
+	</div>
+	<div class="nextPrevPage nextPage">
+		<p>&#x022F1;</p>
+	</div>
+	<div class="popupWrap staffPopupWrap">
+		<!-- <img src="images/team/1.jpg" alt=""/> -->
+		<%= image_tag("team/1.jpg", :alt => "", id: "person-avtar") %>
+
+		<div class="popupText">
+			<h2><div id="person-title">Po Man</div> <span id="person-subtitle">Certified Muthafuka</span></h2>
+			<div id="person-body">
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
+				<p>Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			</div>
+			<%= mail_to "leila@bgi.org.nz", "Contact Po Man", :class => "popupMailLink", id: "person-contact" %>
+			<a class="closeOverlay bottom closeStaff">&#10005</a>
+		</div>
+	</div>
+</div>
+
+<!-- END - Staff popup -->
+
+<!-- Programme popup -->
+
+<div class="overlay programmeOverlay">
+	<a class="closeOverlay closeDownload">&#10005</a>
+	<div class="nextPrevPage prevPage">
+		<p>&#x022F0;</p>
+	</div>
+	<div class="nextPrevPage nextPage">
+		<p>&#x022F1;</p>
+	</div>
+	<div class="popupWrap programmePopupWrap">
+		<!-- <img src="images/programmes/1.jpg" alt=""/> -->
+		<%= image_tag("programmes/1.jpg", :alt => " ") %>
+		<div class="popupText">
+			<h2 id="person-title">Po Man <span id="person-subtitle">Certified Muthafuka</span></h2>
+			<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
+			<p>Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<a href="#" class="programmeProgrammeLink">Download the programme</a>
+			<%= mail_to "leila@bgi.org.nz", "Contact us to Find out more", :class => "popupMailLink" %>
+		</div>
+		<!-- <img src="images/programmes/innerProgrammeImages/1.jpg" alt=""/> -->
+		<%= image_tag("programmes/innerProgrammeImages/1.jpg", :alt => " ") %>
+		<!-- <img src="images/programmes/innerProgrammeImages/2.jpg" alt=""/> -->
+		<%= image_tag("programmes/innerProgrammeImages/2.jpg", :alt => " ") %>
+		<!-- <img src="images/programmes/innerProgrammeImages/3.jpg" alt=""/> -->
+		<%= image_tag("programmes/innerProgrammeImages/3.jpg", :alt => " ") %>
+		<a class="closeOverlay bottom closeDownload">&#10005</a>
+	</div>
+</div>
+
+<!-- END - Programme popup -->
+
+<!-- Fixed nav -->
+
+<div id="fixed-nav">
+	<div class="cf center-section">
+		<%= link_to(image_tag("logo.png", :alt => "logo", :title => "Home", :class => "the-logo fixed-nav-logo"), "#scroll-top", :class => "scroll-top") %>
+		<!-- <img class="the-logo fixed-nav-logo" href="#scroll-top" src="logo.png" alt=""> -->
+		<div class="nav-link" href="#programmes"><p>Programmes</p></div>
+		<div class="nav-link" href="#donate"><p>Donate</p></div>
+		<div class="nav-link" href="#team"><p>Team</p></div>
+		<div class="nav-link" href="#hero"><p>Top</p></div>
+		<div class="ham-nav-wrap cf simple-menu" href="#sidr">
+			<p>sidebar info</p>
+			<div class="ham-nav cf">
+				<div class="bun one"></div>
+				<div class="bun two"></div>
+				<div class="bun three"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- END - Fixed nav -->
+
+<!-- Sidenav wrapper -->
+
+<section class="side-nav animated" id="sidr">
+	<!-- Your content -->
+
+	<div class="sidenav-logo-wrap cf">
+		<% image_tag("logo.png", :alt => " ", :class => "the-logo") %>
+		<h3>BGI<span> Wellington</span></h3>
+	</div>
+	
+	<!-- Contact info -->
+	<div class="side-section">
+		<h3><!-- <i class="flaticon-speech107"></i> -->Ask us anything</h3>
+		<ul class="icon-list">
+			<li class="email">leila@bgi.org.nz</li>
+			<li class="phone">(04) 385 9549</li>
+			<li class="location">3 Macdonald Cres, Te Aro</br>Wellington 6141</li>
+		</ul>
+	</div>
+	<!-- END - Contact info -->
+
+	<!-- Request a callback -->
+	<div class="side-section cf">
+		<h3>Contact us</h3>
+		<div class="input-container">
+			<input type="text" value="your email*" name="your email" id="your email" onblur="if (this.value == '') {this.value = 'your email*';}" onfocus="if (this.value == 'your email*') {this.value = '';}" />
+			<input type="text" value="your name" name="your name" id="your name" onblur="if (this.value == '') {this.value = 'your name';}" onfocus="if (this.value == 'your name') {this.value = '';}" />
+			<textarea>Your Enquiry </textarea>
+			<input type="submit" value="OK">
+		</div>
+	</div>
+	<!-- END - Request a callback -->
+
+	<div class="side-section mapContainer">
+		<a href="https://www.google.co.nz/maps/place/3+Macdonald+Cres,+Te+Aro,+Wellington+6011/@-41.2908699,174.7729677,17z/data=!3m1!4b1!4m2!3m1!1s0x6d38b0282f4f65e7:0x2417032c44ee8f42" target="_blank" class="mapLink" >Go to map</a>
+		<a href="https://www.google.co.nz/maps/place/3+Macdonald+Cres,+Te+Aro,+Wellington+6011/@-41.2908699,174.7729677,17z/data=!3m1!4b1!4m2!3m1!1s0x6d38b0282f4f65e7:0x2417032c44ee8f42" target="_blank">
+			<h3>BGI's location</h3>
+		</a>
+		<a href="https://www.google.co.nz/maps/place/3+Macdonald+Cres,+Te+Aro,+Wellington+6011/@-41.2908699,174.7729677,17z/data=!3m1!4b1!4m2!3m1!1s0x6d38b0282f4f65e7:0x2417032c44ee8f42" target="_blank">
+			<div class="sideMapWrap cf">
+				<p>GO TO MAP</p>
+				<%= image_tag("smallMap.jpg", :alt => " ", :class => "sideMap") %>
+			</div>
+		</a>
+	</div>
+
+</section>
+
+<!-- END - Sidenav wrapper -->
+
+
+
+<%= yield %>
+
+<!-- footer / social -->
+<footer class="cf fl">
+	<div class="social-wrap cf">
+		<div class="social-icon cf">
+			<a target="_blank" href="https://www.facebook.com/BGIWellington?fref=ts"><p class="tac">v</p></a>
+		</div>
+		<!-- <div class="social-icon cf">
+			<a target="_blank" href="#"><p class="tac">ą</p></a>
+		</div> -->
+		<!-- <div class="social-icon cf">
+			<a target="_blank" href="#"><p class="tac">t</p></a>
+		</div> -->
+		<!-- <div class="social-icon cf">
+			<a target="_blank" href="#"><p class="tac">Ć</p></a>
+		</div> -->
+	</div>
+</footer>
+<!-- END - footer / social -->
+
+</body>
+</html>

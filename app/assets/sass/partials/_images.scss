@@ -1,0 +1,48 @@
+.hero {
+	background: $red url('hero.jpg') center center;
+	background-size: cover;
+	.hero-center {
+		background: url('overlay.png');
+	}
+}
+.map {
+	background: $red url('map.jpg') center top;
+}
+.phone {
+	background: transparent url('icon-phone.svg') left 0px no-repeat;
+}
+.location {
+	background: transparent url('icon-location.svg') left 0px no-repeat;
+}
+.email {
+	background: transparent url('icon-email.svg') left 0px no-repeat;
+}
+.popup-header {
+	background: transparent url('popup-header-1.jpg') center center;
+}
+.sidenav-logo-wrap {
+	background: $popup-bg url('hero.jpg') top right;
+	background-blend-mode: multiply;
+}
+#fixed-nav {
+	background: $popup-bg url('hero.jpg') top right;
+	background-blend-mode: multiply;
+	-webkit-background-size: 210%;
+	background-size: 210%;
+}
+.callout-section {
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+	background-color: $blue;
+	&.keep-in-touch  {
+		@media only screen and (min-width: 640px) {
+				background-image: url('overlay.png'), url('keepInTouchBg.jpg');
+				/*background-blend-mode: multiply;*/
+		}
+	}
+	&#donate {
+		@media only screen and (min-width: 640px) {
+				background-image: url('overlay.png'), url('donateBg.jpg');
+		}
+	}
+}

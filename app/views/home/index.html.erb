@@ -1,0 +1,162 @@
+<section class="main-wrap cf">
+	
+	<!-- hero section -->
+	<section id="hero" class="hero cf">
+
+		<div class="hero-center cf">
+			<%= image_tag("logo.png", :alt => " ", :class => "heroLogo") %>
+			<!-- <img class="heroLogo"src="images/logo.png" alt=""> -->
+			<!-- Catchphrase -->
+			<div class="catchphrase">
+				<h1>Create</br>change</h1>
+			</div>
+			<!-- END - Catchphrase -->
+		</div>
+	</section>
+	<!-- END - hero section -->
+
+	<!-- team section -->
+	<section id="team" class="generic-section team center-section cf">
+		<div class="w-12-12">
+			
+			<h2 class="section-heading">Our <span style="font-weight:500;">TEAM</span><!-- <i class="flaticon-cap3"></i> --></h2>
+			<div class="underline grey"></div>
+
+			<!-- Slick -->
+			<div class="slick-wrap w-12-12">
+				<div class="slick cf f-l w-16-12">
+					
+					<% @people.each do |person| %>
+						<div class="slick-slide single">
+							<div class="generic-slide-wrap" onclick=<%="setPerson(#{person.id})"%>>
+								<!-- this text fades down on hover -->
+								<div class="generic-slide-text">
+									<h3 class="name tac"><%= person.title %></h3>
+									<p class="sub"><%= person.content_for(:subtitle).html_safe %></p>
+								</div>
+								<!-- END - this text fades down on hover -->
+								<%= image_tag(image_for(person.content_for(:image)), :alt => "#{person.title}-image") %>
+								<!-- <img src="images/team/1.jpg" alt=""> -->
+							</div>
+						</div>
+					<% end %>
+
+
+				</div>				
+			</div>
+			<!-- END - Slick -->
+
+		</div>
+	</section>
+	<!-- END - team section -->
+
+	<!-- We offer agile training section -->
+	<section id="donate" class="callout-section">
+		<div class="w-12-12">
+			<h1 class="tac">Get behind us</h1>
+			<h3 class="tac">BGI has been working with young people and their families since 1883. Over this time, we have worked closely with thousands of young people and their families from Wellington.</h3>
+			<a href="http://givealittle.co.nz/donate/org/bgi" target="_blank" class="tac center font-size-2em large black btn">Donate<span>›</span></a>
+		</div>
+	</section>
+	<!-- END - We offer agile training section -->
+
+	<!-- downloads section -->
+	<section id="programmes" class="generic-section center-section cf">
+		<div class="w-12-12">
+			
+			<h2 class="section-heading">The <span style="font-weight:500;">Programmes</span><!-- <i class="flaticon-download160"></i> --></h2>
+			<div class="underline grey"></div>
+
+			<!-- Slick -->
+			<div class="slick-wrap w-12-12">
+				<div class="slick cf f-l w-16-12">
+					
+					<div class="slick-slide single">
+						<div class="generic-slide-wrap">
+							<!-- this text fades down on hover -->
+							<div class="generic-slide-text">
+								<h3 class="name">Challenge for change</h3>
+								<p class="sub">Ipsum Tellus</p>
+							</div>
+							<!-- END - this text fades down on hover -->
+							<!-- <img src="images/programmes/1.jpg" alt=""/> -->
+							<%= image_tag("programmes/1.jpg", :alt => " ") %>
+						</div>
+					</div>
+
+					<div class="slick-slide single">
+						<div class="generic-slide-wrap">
+							<!-- this text fades down on hover -->
+							<div class="generic-slide-text">
+								<h3 class="name">Parenting Programmes</h3>
+								<p class="sub">Ornare Adipiscing</p>
+							</div>
+							<!-- END - this text fades down on hover -->
+							<!-- <img src="images/programmes/2.jpg" alt="" /> -->
+							<%= image_tag("programmes/2.jpg", :alt => " ") %>
+
+						</div>
+					</div>
+
+					<div class="slick-slide single">
+						<div class="generic-slide-wrap">
+							<!-- this text fades down on hover -->
+							<div class="generic-slide-text">
+								<h3 class="name">Journeys</h3>
+								<p class="sub">Risus Tristique</p>
+							</div>
+							<!-- END - this text fades down on hover -->
+							<!-- <img src="images/programmes/3.jpg" alt="" /> -->
+							<%= image_tag("programmes/3.jpg", :alt => " ") %>
+						</div>
+					</div>
+
+					<div class="slick-slide single">
+						<div class="generic-slide-wrap">
+							<!-- this text fades down on hover -->
+							<div class="generic-slide-text">
+								<h3 class="name">Sports Break</h3>
+								<p class="sub">Tellus Nibh</p>
+							</div>
+							<!-- END - this text fades down on hover -->
+							<!-- <img src="images/programmes/4.jpg" alt="" /> -->
+							<%= image_tag("programmes/4.jpg", :alt => " ") %>
+						</div>
+					</div>
+
+					<div class="slick-slide single">
+						<div class="generic-slide-wrap">
+							<!-- this text fades down on hover -->
+							<div class="generic-slide-text">
+								<h3 class="name">Adventure Learning</h3>
+								<p class="sub">Condimentum Egestas</p>
+							</div>
+							<!-- END - this text fades down on hover -->
+							<!-- <img src="images/programmes/5.jpg" alt="" /> -->
+							<%= image_tag("programmes/5.jpg", :alt => " ") %>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- END - Slick -->
+
+		</div>
+	</section>
+	<!-- END - downloads section -->
+
+	<!-- Keep in touch section -->
+	<section class="keep-in-touch callout-section cf">
+		<div class="keep-in-touch-centre">
+			<h1 class="tac">Keep in touch</h1>
+			<h3 class="tac">Subscribe to the BGI newsletter and other promotional material</h3>
+			<div class="input-container">
+				<!-- <label for="">Enter your email address</label> -->
+				<input type="text" value="your email address" name="email" id="email" onblur="if (this.value == '') {this.value = 'your email address';}" onfocus="if (this.value == 'your email address') {this.value = '';}" />
+				<input type="submit" value="OK">
+			</div>
+		</div>
+	</section>
+	<!-- END - Keep in touch section -->
+
+</section>

@@ -1,0 +1,55 @@
+.btn {
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	color: white;
+	display: block;
+	width: 6em;
+	text-align: center;
+	letter-spacing: .05em;
+	@include tran-3;
+	&:hover {
+		.no-touch & {
+			padding: 10px 30px;
+		}
+	}
+	&.large {
+		width: 8.5em;
+		padding: 20px 50px;
+		font-size: 1.6em;
+		text-transform: uppercase;
+		font-family: 'Permanent Marker', "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+		&:hover {
+			padding: 20px 70px;
+		}
+	}
+	&.ok {
+		background-color: $blue;
+	}
+	&.light {
+		background-color: $light-grey;
+		color: $dark-text;
+	}
+	&.external {
+		background-color: $dark-grey;
+	}
+	&.center {
+		margin: 2em auto 0 auto;
+	}
+	&.white {
+		background-color: $white-20;
+		background-color: $white-30;
+	}
+	&.black {
+		background-color: $black-20;
+		color: white;
+	}
+	i:before {
+		margin: 0 .5em 0 0;
+	}
+	span {
+		@include sosa;
+		font-size: 1.2em;
+		margin-left: .2em;
+	}
+}
