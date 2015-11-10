@@ -142,7 +142,6 @@ nav p {
   src: font-url("sosa.eot?#iefix") format("embedded-opentype"), font-url("sosa.woff") format("woff"), font-url("sosa.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
 h1, h2, h3 {
   margin: 0; }
 
@@ -227,7 +226,7 @@ img {
   background: #ee2741; }
 
 .green {
-  background: #08d04f; }
+  background: #08D04F; }
 
 .callout-section {
   background-color: #006ecc; }
@@ -1022,6 +1021,7 @@ footer {
         display: inline-block; }
     .overlay .popupWrap img {
       width: 100%;
+      height: auto;
       margin-bottom: 1em; }
   .overlay .programmeProgrammeLink {
     display: block;
@@ -1056,7 +1056,7 @@ footer {
   .btn.ok {
     background-color: #008aff; }
   .btn.light {
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
     color: #575757; }
   .btn.external {
     background-color: #232527; }
@@ -1221,3 +1221,5 @@ footer {
     right: 1em; }
   .nextPrevPage:hover {
     color: #008aff; }
+
+/*# sourceMappingURL=style.css.map */

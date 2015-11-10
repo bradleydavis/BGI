@@ -40,7 +40,7 @@
 <!-- Programme popup -->
 
 <div class="overlay programmeOverlay">
-	<a class="closeOverlay closeDownload">&#10005</a>
+	<a class="closeOverlay closeProgramme">&#10005</a>
 	<div class="nextPrevPage prevPage">
 		<p>&#x022F0;</p>
 	</div>
@@ -49,21 +49,24 @@
 	</div>
 	<div class="popupWrap programmePopupWrap">
 		<!-- <img src="images/programmes/1.jpg" alt=""/> -->
-		<%= image_tag("programmes/1.jpg", :alt => " ") %>
+		<%= image_tag("programmes/1.jpg", :alt => "", id: "programme-avtar") %>
 		<div class="popupText">
-			<h2 id="person-title">Po Man <span id="person-subtitle">Certified Muthafuka</span></h2>
-			<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
-			<p>Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<h2 id="programme-title">Po Man<span id="programme-subtitle">Certified Muthafuka</span></h2>
+			<div id="programme-body">
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>
+				<p>Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			</div>
 			<a href="#" class="programmeProgrammeLink">Download the programme</a>
 			<%= mail_to "leila@bgi.org.nz", "Contact us to Find out more", :class => "popupMailLink" %>
 		</div>
-		<!-- <img src="images/programmes/innerProgrammeImages/1.jpg" alt=""/> -->
-		<%= image_tag("programmes/innerProgrammeImages/1.jpg", :alt => " ") %>
-		<!-- <img src="images/programmes/innerProgrammeImages/2.jpg" alt=""/> -->
-		<%= image_tag("programmes/innerProgrammeImages/2.jpg", :alt => " ") %>
-		<!-- <img src="images/programmes/innerProgrammeImages/3.jpg" alt=""/> -->
-		<%= image_tag("programmes/innerProgrammeImages/3.jpg", :alt => " ") %>
-		<a class="closeOverlay bottom closeDownload">&#10005</a>
+		
+		<div id="programme-images">
+			<!-- <img src="images/programmes/innerProgrammeImages/1.jpg" alt=""/> -->
+			<!-- <img src="images/programmes/innerProgrammeImages/2.jpg" alt=""/> -->
+			<!-- <img src="images/programmes/innerProgrammeImages/3.jpg" alt=""/> -->
+		</div>
+		
+		<a class="closeOverlay bottom closeProgramme">&#10005</a>
 	</div>
 </div>
 

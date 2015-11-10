@@ -70,72 +70,21 @@
 			<!-- Slick -->
 			<div class="slick-wrap w-12-12">
 				<div class="slick cf f-l w-16-12">
-					
-					<div class="slick-slide single">
-						<div class="generic-slide-wrap">
-							<!-- this text fades down on hover -->
-							<div class="generic-slide-text">
-								<h3 class="name">Challenge for change</h3>
-								<p class="sub">Ipsum Tellus</p>
-							</div>
-							<!-- END - this text fades down on hover -->
-							<!-- <img src="images/programmes/1.jpg" alt=""/> -->
-							<%= image_tag("programmes/1.jpg", :alt => " ") %>
-						</div>
-					</div>
 
-					<div class="slick-slide single">
-						<div class="generic-slide-wrap">
-							<!-- this text fades down on hover -->
-							<div class="generic-slide-text">
-								<h3 class="name">Parenting Programmes</h3>
-								<p class="sub">Ornare Adipiscing</p>
+					<% @programmes.each do |programme| %>
+						<div class="slick-slide single">
+							<div class="generic-slide-wrap" onclick=<%="setProgramme(#{programme.id})"%>>
+								<!-- this text fades down on hover -->
+								<div class="generic-slide-text">
+									<h3 class="name tac"><%= programme.title %></h3>
+									<p class="sub"><%= ActionView::Base.full_sanitizer.sanitize programme.content_for(:subtitle) %></p>
+								</div>
+								<!-- END - this text fades down on hover -->
+								<%= image_tag(image_for(programme.content_for(:image)), :alt => "#{programme.title}-image") %>
+								<!-- <img src="images/team/1.jpg" alt=""> -->
 							</div>
-							<!-- END - this text fades down on hover -->
-							<!-- <img src="images/programmes/2.jpg" alt="" /> -->
-							<%= image_tag("programmes/2.jpg", :alt => " ") %>
-
 						</div>
-					</div>
-
-					<div class="slick-slide single">
-						<div class="generic-slide-wrap">
-							<!-- this text fades down on hover -->
-							<div class="generic-slide-text">
-								<h3 class="name">Journeys</h3>
-								<p class="sub">Risus Tristique</p>
-							</div>
-							<!-- END - this text fades down on hover -->
-							<!-- <img src="images/programmes/3.jpg" alt="" /> -->
-							<%= image_tag("programmes/3.jpg", :alt => " ") %>
-						</div>
-					</div>
-
-					<div class="slick-slide single">
-						<div class="generic-slide-wrap">
-							<!-- this text fades down on hover -->
-							<div class="generic-slide-text">
-								<h3 class="name">Sports Break</h3>
-								<p class="sub">Tellus Nibh</p>
-							</div>
-							<!-- END - this text fades down on hover -->
-							<!-- <img src="images/programmes/4.jpg" alt="" /> -->
-							<%= image_tag("programmes/4.jpg", :alt => " ") %>
-						</div>
-					</div>
-
-					<div class="slick-slide single">
-						<div class="generic-slide-wrap">
-							<!-- this text fades down on hover -->
-							<div class="generic-slide-text">
-								<h3 class="name">Adventure Learning</h3>
-								<p class="sub">Condimentum Egestas</p>
-							</div>
-							<!-- END - this text fades down on hover -->
-							<!-- <img src="images/programmes/5.jpg" alt="" /> -->
-							<%= image_tag("programmes/5.jpg", :alt => " ") %>
-						</div>
-					</div>
+					<% end %>					
 
 				</div>
 			</div>

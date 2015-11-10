@@ -83,7 +83,8 @@ $('.slick').slick({
 	    }
 	});
 
-	$('#programmes .slick-slide, .closeDownload').click(function() {
+	// $('#programmes .slick-slide, .closeDownload').click(function() {
+	$('.closeProgramme').click(function() {	
 	    if($('.programmeOverlay').hasClass('on') === true) {       
 	      $('.programmeOverlay').removeClass('on');
 	      $('.body').removeClass('bodyFixed');
@@ -100,6 +101,37 @@ $('.slick').slick({
 });
 
 
+// This function calls a rails controller endpoint and initialises the data for the programme 
+function setProgramme(id) {
+	$.ajax({        
+	        type: "GET",
+	        url: "/people/" + id + ".json",
+	        data: null,
+	        cache: false,
+	        success: function(response)
+	        {
+	            $("#programme-title").html(response["title"]);	            
+	            $("#programme-subtitle").html(sanitizeHTML(response["subtitle"]));
+	            $("#programme-body").html(response["body"]);
+	            $("#programme-contact").attr("href", sanitizeHTML(response["contact"]));
+	            $("#programme-contact").html("Contact " + response["title"]);
+	            $("#programme-avtar").attr("src", response["avtar"]);
+	            $("#programme-images").html(response["images"])
+	        }
+	    });
+
+	  if($('.programmeOverlay').hasClass('on') === true) {
+	  	console.log("TRUE");    
+	    $('.programmeOverlay').removeClass('on');
+	    $('.body').removeClass('bodyFixed');
+	  }
+	  else{
+	  	console.log("FALSE");
+	    $('.programmeOverlay').addClass('on');
+	    $('.body').addClass('bodyFixed');
+	  }
+};
+
 // This function calls a rails controller endpoint and initialises the data for the person 
 function setPerson(id) {
 
@@ -113,15 +145,11 @@ function setPerson(id) {
 	            $("#person-title").html(response["title"]);	            
 	            $("#person-subtitle").html(sanitizeHTML(response["subtitle"]));
 	            $("#person-body").html(response["body"]);
-	            $("#person-contact").attr("href", sanitizeHTML(response["contact"]));
+	            $("#person-contact").attr("href", "mailto:" + sanitizeHTML(response["contact"]));
 	            $("#person-contact").html("Contact " + response["title"]);
 	            $("#person-avtar").attr("src", response["avtar"]);
 	        }
 	    });
-
-
-	// $.get("/", {person_id: id});	
-	// $.get("/set_person/", {page_id: id}, function(data) {
 
 	  if($('.staffOverlay').hasClass('on') === true) {       
 	    $('.staffOverlay').removeClass('on');
@@ -131,7 +159,6 @@ function setPerson(id) {
 	    $('.staffOverlay').addClass('on');
 	    $('.body').addClass('bodyFixed');
 	  }	
-	// });
 };
 
 function sanitizeHTML(input) {

@@ -3,6 +3,10 @@ class HomeController < ApplicationController
 	def index
 		people = Refinery::Page.find_by_link_url('/people')
     @people = people.nil? ? [] : people.children
+
+    programmes = Refinery::Page.find_by_link_url('/programmes')
+    @programmes = programmes.nil? ? [] : programmes.children
+
     if params[:person_id]
     	@person = Refinery::Page.find(params[:person_id])
     	@body = "body bodyFixed"
